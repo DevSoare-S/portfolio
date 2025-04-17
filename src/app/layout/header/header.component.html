@@ -2,11 +2,11 @@
     <nav class="container mx-auto flex justify-between items-center">
       <h1 class="text-xl font-bold">Lucas Dev</h1>
       <ul class="flex gap-6">
-        <li><a routerLink="/" class="hover:text-indigo-400">Home</a></li>
-        <li><a routerLink="/projetos" class="hover:text-indigo-400">Projetos</a></li>
-        <li><a routerLink="/jogos" class="hover:text-indigo-400">Jogos</a></li>
-        <li><a routerLink="/sobre" class="hover:text-indigo-400">Sobre</a></li>
-        <li><a routerLink="/contato" class="hover:text-indigo-400">Contato</a></li>
+        <li><a routerLink="/" routerLinkActive="text-indigo-500 font-semibold" [routerLinkActiveOptions]="{exact: true}" class="hover:text-indigo-400 transition">Home</a></li>
+        <li><a routerLink="/projetos" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-400 transition">Projetos</a></li>
+        <li><a routerLink="/jogos" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-400 transition">Jogos</a></li>
+        <li><a routerLink="/sobre" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-400 transition">Sobre</a></li>
+        <li><a routerLink="/contato" routerLinkActive="text-indigo-500 font-semibold" class="hover:text-indigo-400 transition">Contato</a></li>
       </ul>
     </nav>
   </header>

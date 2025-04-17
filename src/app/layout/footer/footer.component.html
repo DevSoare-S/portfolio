@@ -1,0 +1,29 @@
+<footer class="fixed bottom-0 left-0 w-full bg-gray-900 text-white py-4 px-6 z-50">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <span class="text-sm">&copy; {{ currentYear }} Lucas De Jesus Soares</span>
+
+    <div class="flex items-center gap-2 text-sm bg-white/10 px-3 py-2 rounded-xl backdrop-blur-md shadow-md">
+      <img [src]="weatherIconUrl" alt="clima" class="w-6 h-6" *ngIf="weatherIconUrl" />
+      <span *ngIf="temperature">{{ temperature }}°C - {{ weatherDescription }} em {{ city }}</span>
+
+      <button (click)="toggleCityInput()" class="ml-2 underline text-indigo-400 hover:text-indigo-300">
+        Trocar cidade
+      </button>
+
+      <div *ngIf="showInput" class="flex gap-2 items-center ml-4">
+        <input
+          type="text"
+          [(ngModel)]="cityInput"
+          placeholder="Digite a cidade"
+          class="px-2 py-1 rounded-md text-black"
+        />
+        <button
+          (click)="confirmCity()"
+          class="px-2 py-1 text-sm bg-indigo-500 hover:bg-indigo-600 rounded text-white"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
