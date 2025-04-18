@@ -26,4 +26,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/contato/contato.component').then(m => m.ContatoComponent),
   },
+
+  {
+    path: 'certificados',
+    loadComponent: () =>
+      import('./features/certificados/certificados.component').then(m => m.CertificadosComponent),
+  },
 ];
